@@ -1,0 +1,6 @@
+https://github.com/Revadike/InternalSteamWebAPI/wiki
+https://github.com/Revadike/InternalSteamWebAPI/wiki/Get-Market-Listing
+
+https://steamcommunity.com/market/priceoverview?appid=753&market_hash_name=753-Sack%20of%20Gems
+https://raw.githubusercontent.com/nolddor/steam-badges-db/main/data/badges.json
+https://steamcommunity.com/id/WickedJackBOO/games?xml=1
