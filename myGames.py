@@ -2,36 +2,50 @@ import requests
 from bs4 import BeautifulSoup
 import xmltodict
 import json
-from datetime import datetime
+from datetime import datetime,timedelta
 import os
 import time
 
-accountUrl = "https://steamcommunity.com/id/WickedJackBOO/games?xml=1"
-cardsUrl = "https://raw.githubusercontent.com/nolddor/steam-badges-db/main/data/badges.json"
-
+apiInfo = {
+    "account":{
+        "infoType":"xml", # account name here V V V V
+        "url":"https://steamcommunity.com/id/WickedJackBOO/games?xml=1",
+        "fileSaveName":"cards.json"
+    },
+    "cards":{
+        "infoType":"json",
+        "url":"https://raw.githubusercontent.com/nolddor/steam-badges-db/main/data/badges.json",
+        "fileSaveName":"myGames.json"
+    }
+}
 startRunTime = datetime.now()
 print(f"Start time {startRunTime}")
 
-def getInfo(startRunTime, accountUrl, cardsUrl):
-    response = requests.get(accountUrl)
-    soup = BeautifulSoup(response.content, "xml")
-    xmlStr = str(soup)
+for info in apiInfo:
+    infoType = apiInfo[info]["infoType"]
+    url = apiInfo[info]["url"]
+    fileSaveName = apiInfo[info]["fileSaveName"]
+    modTime = datetime.fromtimestamp(os.path.getmtime(fileSaveName))
+    ping = (startRunTime-modTime)>timedelta(days=7)
+    # print(infoType);print(url);print(fileSaveName);print(ping)
+    if ping:
+        print(f"{fileSaveName} is {startRunTime-modTime} old and will be updated")
+        try:
+            response = requests.get(url)
+            if infoType == "xml":
+                soup = BeautifulSoup(response.content, "xml")
+                xmlStr = str(soup)
+                dataDump = xmltodict.parse(xmlStr)
+            if infoType == "json":
+                dataDump = response.json()
+            
+            with open(fileSaveName, 'w') as f:
+                json.dump(dataDump, f)
+        except Exception as e:
+            print(f"oops something happened \n{e}")
 
-    modTime = datetime.fromtimestamp(os.path.getmtime("myGames.json"))
-    print (modTime)
-    jsonData = xmltodict.parse(xmlStr)
-    jsonStr = json.dumps(jsonData, indent=1)
-    with open('myGames.json', 'w') as f:
-        json.dump(jsonData, f)
 
-    response = requests.get(cardsUrl)
-    GamesWithCardsData = response.json()
-    with open('cards.json', 'w') as f:
-        json.dump(GamesWithCardsData, f)
-    return 
-
-
-print (startRunTime - modTime)
+# print (startRunTime - modTime)
 
 
 # for game in jsonData["gamesList"]["games"]["game"]:
