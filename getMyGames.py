@@ -10,26 +10,33 @@ apiInfo = {
     "account":{
         "infoType":"xml", # account name here V V V V
         "url":"https://steamcommunity.com/id/WickedJackBOO/games?xml=1",
-        "fileSaveName":"cards.json"
+        "fileSaveName":"account.json"
     },
     "cards":{
         "infoType":"json",
         "url":"https://raw.githubusercontent.com/nolddor/steam-badges-db/main/data/badges.json",
-        "fileSaveName":"myGames.json"
+        "fileSaveName":"cards.json"
     }
 }
 startRunTime = datetime.now()
 print(f"Start time {startRunTime}")
 
 for info in apiInfo:
+    exists = os.path.exists(apiInfo["account"]["fileSaveName"]) and os.path.exists(apiInfo["cards"]["fileSaveName"]) 
     infoType = apiInfo[info]["infoType"]
     url = apiInfo[info]["url"]
     fileSaveName = apiInfo[info]["fileSaveName"]
-    modTime = datetime.fromtimestamp(os.path.getmtime(fileSaveName))
-    ping = (startRunTime-modTime)>timedelta(days=7)
+    if exists:
+        modTime = datetime.fromtimestamp(os.path.getmtime(fileSaveName))
+        ping = (startRunTime-modTime)>timedelta(days=7)
+    else:
+        ping = True
     # print(infoType);print(url);print(fileSaveName);print(ping)
     if ping:
-        print(f"{fileSaveName} is {startRunTime-modTime} old and will be updated")
+        if exists:
+            print(f"{fileSaveName} is {startRunTime-modTime} old and will be updated")
+        else:
+            print(f"A file is missing getting info for {fileSaveName}")
         try:
             response = requests.get(url)
             if infoType == "xml":
@@ -43,13 +50,18 @@ for info in apiInfo:
                 json.dump(dataDump, f)
         except Exception as e:
             print(f"oops something happened \n{e}")
+    
+with open(apiInfo["account"]["fileSaveName"]) as file:
+    accountJson = json.load(file)
+with open(apiInfo["cards"]["fileSaveName"]) as file:
+    cardsJson = json.load(file)
+game_names = []
+for game in accountJson["gamesList"]["games"]["game"]:
+    if game["appID"] in cardsJson:
+        game_names.append(game["name"])
+        print (game["name"])
+with open("savedGames.json", "w") as output_file:
+    json.dump(game_names, output_file, indent=4) 
 
-
-# print (startRunTime - modTime)
-
-
-# for game in jsonData["gamesList"]["games"]["game"]:
-#     if game["appID"] in GamesWithCardsData:
-#         print (game["name"])
-
+print("game info saved")
 
