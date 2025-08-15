@@ -4,7 +4,6 @@ import xmltodict
 import json
 from datetime import datetime,timedelta
 import os
-import time
 
 apiInfo = {
     "account":{
@@ -55,13 +54,20 @@ with open(apiInfo["account"]["fileSaveName"]) as file:
     accountJson = json.load(file)
 with open(apiInfo["cards"]["fileSaveName"]) as file:
     cardsJson = json.load(file)
-game_names = []
+
+savedGames = {}
+
 for game in accountJson["gamesList"]["games"]["game"]:
     if game["appID"] in cardsJson:
-        game_names.append(game["name"])
-        print (game["name"])
+        savedGames[game["appID"]] = {
+            "name": cardsJson[game["appID"]]["name"],
+            "numberOfCards": cardsJson[game["appID"]]["size"],
+            "cards": []
+        }
+        print(game["name"])
+
 with open("savedGames.json", "w") as output_file:
-    json.dump(game_names, output_file, indent=4) 
+    json.dump(savedGames, output_file, indent=4) 
 
 print("game info saved")
 

@@ -1,60 +1,292 @@
-[
-    "7 Days to Die",
-    "Apex Legends",
-    "Arma 3",
-    "Atomic Heart",
-    "Battlefield\u2122 2042",
-    "Battlestar Galactica Deadlock",
-    "BioShock 2 Remastered",
-    "BioShock Infinite",
-    "BioShock Remastered",
-    "Counter-Strike 2",
-    "Crossout",
-    "Cyberpunk 2077",
-    "Dead Space",
-    "Deep Rock Galactic",
-    "Delta Force",
-    "DOOM",
-    "DOOM Eternal",
-    "Dying Light",
-    "Dying Light 2: Reloaded Edition",
-    "EVE Online",
-    "Fantasy General II",
-    "Frostpunk",
-    "FTL: Faster Than Light",
-    "Generation Zero\u00ae",
-    "Grey Hack",
-    "Hacknet",
-    "Hardspace: Shipbreaker",
-    "HELLION",
-    "Hydroneer",
-    "Just Cause 4",
-    "Kerbal Space Program",
-    "Metro 2033 Redux",
-    "Metro: Last Light Redux",
-    "Metro Exodus",
-    "Mr.Mine",
-    "No Man's Sky",
-    "Oxygen Not Included",
-    "PC Building Simulator",
-    "Portal 2",
-    "Rise of the Tomb Raider",
-    "Rust",
-    "Shadow of the Tomb Raider",
-    "Space Engineers",
-    "Starfield",
-    "Subnautica: Below Zero",
-    "SUPERHOT",
-    "SUPERHOT VR",
-    "Titanfall\u00ae 2",
-    "Tomb Raider",
-    "Tom Clancy's Rainbow Six\u00ae Siege X",
-    "Trailmakers",
-    "Undertale",
-    "Unfortunate Spacemen",
-    "Vampire Survivors",
-    "Wallpaper Engine",
-    "Warface: Clutch",
-    "War Thunder",
-    "X4: Foundations"
-]
+{
+    "251570": {
+        "name": "7 Days to Die",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "1172470": {
+        "name": "Apex Legends",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "107410": {
+        "name": "Arma 3",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "668580": {
+        "name": "Atomic Heart",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "1517290": {
+        "name": "Battlefield\u2122 2042",
+        "numberOfCards": 10,
+        "cards": []
+    },
+    "544610": {
+        "name": "Battlestar Galactica Deadlock",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "409720": {
+        "name": "BioShock 2 Remastered",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "8870": {
+        "name": "BioShock Infinite",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "409710": {
+        "name": "BioShock Remastered",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "730": {
+        "name": "Counter-Strike 2",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "386180": {
+        "name": "Crossout",
+        "numberOfCards": 9,
+        "cards": []
+    },
+    "1091500": {
+        "name": "Cyberpunk 2077",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "1693980": {
+        "name": "Dead Space",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "548430": {
+        "name": "Deep Rock Galactic",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "2507950": {
+        "name": "Delta Force",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "379720": {
+        "name": "DOOM",
+        "numberOfCards": 9,
+        "cards": []
+    },
+    "782330": {
+        "name": "DOOM Eternal",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "239140": {
+        "name": "Dying Light",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "534380": {
+        "name": "Dying Light 2: Reloaded Edition",
+        "numberOfCards": 10,
+        "cards": []
+    },
+    "8500": {
+        "name": "EVE Online",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "1025440": {
+        "name": "Fantasy General II",
+        "numberOfCards": 11,
+        "cards": []
+    },
+    "323190": {
+        "name": "Frostpunk",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "212680": {
+        "name": "FTL: Faster Than Light",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "704270": {
+        "name": "Generation Zero\u00ae",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "605230": {
+        "name": "Grey Hack",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "365450": {
+        "name": "Hacknet",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "1161580": {
+        "name": "Hardspace: Shipbreaker",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "588210": {
+        "name": "HELLION",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "1106840": {
+        "name": "Hydroneer",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "517630": {
+        "name": "Just Cause 4",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "220200": {
+        "name": "Kerbal Space Program",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "286690": {
+        "name": "Metro 2033 Redux",
+        "numberOfCards": 9,
+        "cards": []
+    },
+    "287390": {
+        "name": "Metro: Last Light Redux",
+        "numberOfCards": 9,
+        "cards": []
+    },
+    "412020": {
+        "name": "Metro Exodus",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "1397920": {
+        "name": "Mr.Mine",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "275850": {
+        "name": "No Man's Sky",
+        "numberOfCards": 15,
+        "cards": []
+    },
+    "457140": {
+        "name": "Oxygen Not Included",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "621060": {
+        "name": "PC Building Simulator",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "620": {
+        "name": "Portal 2",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "391220": {
+        "name": "Rise of the Tomb Raider",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "252490": {
+        "name": "Rust",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "750920": {
+        "name": "Shadow of the Tomb Raider",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "244850": {
+        "name": "Space Engineers",
+        "numberOfCards": 9,
+        "cards": []
+    },
+    "1716740": {
+        "name": "Starfield",
+        "numberOfCards": 9,
+        "cards": []
+    },
+    "848450": {
+        "name": "Subnautica: Below Zero",
+        "numberOfCards": 14,
+        "cards": []
+    },
+    "322500": {
+        "name": "SUPERHOT",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "617830": {
+        "name": "SUPERHOT VR",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "1237970": {
+        "name": "Titanfall\u00ae 2",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "203160": {
+        "name": "Tomb Raider",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "359550": {
+        "name": "Tom Clancy's Rainbow Six\u00ae Siege X",
+        "numberOfCards": 10,
+        "cards": []
+    },
+    "585420": {
+        "name": "Trailmakers",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "391540": {
+        "name": "Undertale",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "408900": {
+        "name": "Unfortunate Spacemen",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "1794680": {
+        "name": "Vampire Survivors",
+        "numberOfCards": 5,
+        "cards": []
+    },
+    "431960": {
+        "name": "Wallpaper Engine",
+        "numberOfCards": 6,
+        "cards": []
+    },
+    "291480": {
+        "name": "Warface: Clutch",
+        "numberOfCards": 7,
+        "cards": []
+    },
+    "236390": {
+        "name": "War Thunder",
+        "numberOfCards": 8,
+        "cards": []
+    },
+    "392160": {
+        "name": "X4: Foundations",
+        "numberOfCards": 6,
+        "cards": []
+    }
+}
