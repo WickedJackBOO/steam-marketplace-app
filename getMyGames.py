@@ -66,8 +66,8 @@ for game in accountJson["gamesList"]["games"]["game"]:
         }
         print(game["name"])
 
-with open("savedGames.json", "w") as output_file:
-    json.dump(savedGames, output_file, indent=4) 
+with open("savedGames.json", "w") as file:
+    json.dump(savedGames, file, indent=4) 
 
 print("game info saved")
 

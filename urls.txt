@@ -1,6 +1,23 @@
-https://github.com/Revadike/InternalSteamWebAPI/wiki
-https://github.com/Revadike/InternalSteamWebAPI/wiki/Get-Market-Listing
 
-https://steamcommunity.com/market/priceoverview?appid=753&market_hash_name=753-Sack%20of%20Gems
-https://raw.githubusercontent.com/nolddor/steam-badges-db/main/data/badges.json
-https://steamcommunity.com/id/WickedJackBOO/games?xml=1
+Revadike/InternalSteamWebAPI
+    https://github.com/Revadike/InternalSteamWebAPI/wiki
+    https://github.com/Revadike/InternalSteamWebAPI/wiki/Get-Market-Listing
+
+Sack of Gems price 
+    https://steamcommunity.com/market/priceoverview??country=CA&language=english&currency=20&appid=753&market_hash_name=753-Sack%20of%20Gems
+
+list of games with cards
+    https://raw.githubusercontent.com/nolddor/steam-badges-db/main/data/badges.json
+
+list of games from account name
+    https://steamcommunity.com/id/[User name here]/games?xml=1
+
+games card list
+    Normal cards
+        https://steamcommunity.com/market/search/render/?appid=753&norender=1&category_753_cardborder[]=tag_cardborder_0&category_753_Game[]=tag_app_[GAME NUMBER GO HERE]
+    Foil cards
+        https://steamcommunity.com/market/search/render/?appid=753&norender=1&category_753_cardborder[]=tag_cardborder_1&category_753_Game[]=tag_app_[GAME NUMBER GO HERE]
+
+put in front of icon_url in games card list results 
+    https://community.cloudflare.steamstatic.com/economy/image/[url here]
+
