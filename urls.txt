@@ -18,6 +18,9 @@ games card list
     Foil cards
         https://steamcommunity.com/market/search/render/?appid=753&norender=1&category_753_cardborder[]=tag_cardborder_1&category_753_Game[]=tag_app_[GAME NUMBER GO HERE]
 
+game card packs
+    https://steamcommunity.com/market/search/render?appid=753&norender=1&category_753_Game[]=tag_app_[GAME NUMBER GO HERE]&query=booster%20pack
+
 put in front of icon_url in games card list results 
     https://community.cloudflare.steamstatic.com/economy/image/[url here]
 

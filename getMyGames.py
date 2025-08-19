@@ -5,10 +5,12 @@ import json
 from datetime import datetime,timedelta
 import os
 
+accountName = "WickedJackBOO"
+
 apiInfo = {
     "account":{
         "infoType":"xml", # account name here V V V V
-        "url":"https://steamcommunity.com/id/WickedJackBOO/games?xml=1",
+        "url":f"https://steamcommunity.com/id/{accountName}/games?xml=1",
         "fileSaveName":"account.json"
     },
     "cards":{
@@ -30,7 +32,6 @@ for info in apiInfo:
         ping = (startRunTime-modTime)>timedelta(days=7)
     else:
         ping = True
-    # print(infoType);print(url);print(fileSaveName);print(ping)
     if ping:
         if exists:
             print(f"{fileSaveName} is {startRunTime-modTime} old and will be updated")
@@ -62,7 +63,8 @@ for game in accountJson["gamesList"]["games"]["game"]:
         savedGames[game["appID"]] = {
             "name": cardsJson[game["appID"]]["name"],
             "numberOfCards": cardsJson[game["appID"]]["size"],
-            "cards": []
+            "cards": [],
+            "cardPack": []
         }
         print(game["name"])
 
