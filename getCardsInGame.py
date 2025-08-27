@@ -1,7 +1,7 @@
 import json
 import requests
 import time
-from usefulFunctions import getJsonWithRetry
+from usefulFunctions import getJsonWithRetry # type: ignore
 
 print("Start")
 
