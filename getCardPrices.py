@@ -1,8 +1,7 @@
-# priceClient.py
-import requests
-import time
+import json
+from datetime import datetime
 from urllib.parse import quote
-from usefulFunctions import getJsonWithRetry
+from usefulFunctions import getJsonWithRetry # type: ignore
 
 
 country = "CA"          # CA so steam does not fall back to US
